@@ -175,3 +175,161 @@ testArray.lastIndexOf(2);
 testArray;
 
 // looping
+for (let i = 0; i < 5; i++) {
+  // code bloack to be executed
+  console.log(i);
+}
+
+const credentials = {
+  username: "john doe",
+  password: "12345678",
+};
+
+for (key in credentials) {
+  console.log(key);
+}
+
+const newName = "peter";
+while (newName == "peter") {
+  // execute statement
+}
+
+for (keys of credentials) {
+  console.log(keys);
+}
+
+let oldFriends = ["peter", "shina", "daniel", "gbenga", "ayo", "brian"];
+
+oldFriends.forEach((element, index) => {
+  console.log(element);
+  console.log(index);
+});
+
+oldFriends.map((element, index) => {
+  console.log(element);
+  console.log(index);
+});
+
+oldFriends.filter((element, index) => {
+  // code block to be executed
+});
+
+oldFriends.findIndex((el, id, arrr) => {
+  // code block to be executed
+});
+
+oldFriends.some((el, id, arr) => {
+  // code block to be executed
+});
+
+oldFriends.every((el, id) => {
+  // code block to be executed
+});
+
+oldFriends.reduce((prevValue, currValue, index, array) => {
+  // code block
+});
+
+oldFriends.reduceRight((prevValue, currValue, index, array) => {
+  // code block
+});
+
+// value and reference
+
+// arrays
+const numbers = [1, 2, 3, 4, 5];
+const anotherNumber = numbers;
+anotherNumber.push(6);
+
+console.log(numbers === anotherNumber);
+
+// objects
+const person = {
+  firstName: "habib",
+  lastName: "oyero",
+};
+
+const anotherPerson = person;
+anotherPerson.lastName = "ajadi";
+
+console.log(person === anotherPerson);
+
+// cloning arrays
+
+const original = [1, 2, 3, 4, 5, 6];
+const newOg = [...original];
+
+newOg.push(7);
+console.log(newOg);
+console.log(original);
+console.log(original === newOg);
+
+const users = [
+  { firstName: "habib", lastName: "oyero" },
+  { firstName: "mateen", lastName: "jolaosho" },
+];
+
+const newUser = JSON.parse(JSON.stringify(users));
+
+console.log(users === newUser);
+
+// math and date methods
+
+let value = 100;
+let value2 = 50.5;
+let value3 = 3;
+let allNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 19];
+
+Math.abs(value);
+Math.acos(value);
+Math.acosh(value);
+Math.asin(value);
+Math.asinh(value);
+Math.atan(value);
+Math.atanh(value);
+Math.cbrt(value);
+Math.ceil(value2);
+Math.exp(value3);
+Math.floor(value2);
+Math.max(...allNumbers);
+Math.min(...allNumbers);
+
+Math.pow(2, 5);
+Math.random();
+Math.sign(-3);
+Math.sinh(5);
+
+Math.trunc(value2);
+
+// date object
+
+let date = new Date();
+
+date.getFullYear();
+date.getMonth();
+date.getDate();
+date.getHours();
+date.getMinutes();
+date.getTime();
+date.getDay();
+let newDate = Date.now();
+
+date.getMilliseconds();
+date.getSeconds();
+
+date.getUTCFullYear();
+
+// set date methods
+
+let oldDate = new Date();
+
+oldDate.setDate(25);
+oldDate.setFullYear(2020);
+oldDate.setMonth(7);
+oldDate.setTime(1598000000000);
+
+console.log(oldDate);
+
+const testDate = new Date(2014, 4, 22);
+
+const testDateNew = new Date("23 May, 2002");
