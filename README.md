@@ -5,10 +5,10 @@
   - let
   - var
     - ### differences between all three
-      - const cannot be re-initialized.
+      - const cannot be re-initialized. 
       - const and var are block scope.
       - let and var can be re-initialized.
-      - var is function scope
+      - var is function scope 
   - A block is a set of opening and closing braces
   - Scope determines the visibility of a variable in the area of your code
     - we have two types of scope
@@ -18,48 +18,48 @@
           - function scope
           - block scope
   - ## Data types
-    - primitive data type
-      - number
-      - strings
-      - boolean
-      - null - no value at all
-      - undefined - a variable that has been declared but not initialized
-      - symbol - identifier for object property
-    - non-primitive data type
-      - object
-      - regex
-      - array
+      - primitive data type
+        - number
+        - strings
+        - boolean
+        - null - no value at all
+        - undefined - a variable that has been declared but not initialized
+        - symbol - identifier for object property
+      - non-primitive data type
+        - object
+        - regex
+        - array
     - operators
-      - basic operators
-        - -
-        - -
-        - -
-        - /
-        - ()
-        - %
-        - ++
-        ***
-      - comparison operators
-        - ==
-        - ===
-        - !=
-        - !==
-        - `>`
-        - <
-        - `>=`
-        - <=
-      - logical operators
-        - &&
-        - ||
-        - !
-      - bitwise operators
-        - ^
-        - |
-        - &
-        - `>>`
-        - <<
-        - `>>>`
-        - ~
+        - basic operators
+          - +
+          - -
+          - *
+          - /
+          - ()
+          - %
+          - ++
+          - --
+        - comparison operators
+          - ==
+          - ===
+          - !=
+          - !==
+          - `>`
+          - <
+          - `>=`
+          - <=
+        - logical operators
+          - &&
+          - ||
+          - !
+        - bitwise operators
+          - ^
+          - |
+          - &
+          - `>>`
+          - <<
+          - `>>>`
+          - ~
     - Turthy / Falsy values
       - falsy values
         - 0
@@ -70,3 +70,4 @@
         - NaN
         - `[]` - This is not falsy
       - Everything that is not falsy is truthy
+
