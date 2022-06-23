@@ -7,48 +7,147 @@
     <title>Javascript Refresh</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <h1 id="hello">hello</h1>
-    <br />
-    <form onsubmit="funcOnsubmit()" onreset="funcOnreset()">
-      <input
-        type="text"
-        onblur="funcBlur()"
-        onchange="funcOnchange()"
-        onfocus="funcOnfocus()"
-        onselect="funcOnselect()"
-        onkeydown="funcOnkeydown()"
-        onkeypress="funcOnkeypress()"
-        onkeyup="funcOnkeyup()"
-      />
-      <button type="submit">submit</button>
-      <input type="reset" value="reset" />
-      <!-- <input type="submit" value="newSubmit"> -->
-    </form>
-    <br />
-    <button onclick="funcOnclick()" oncontextmenu="funcOncontext()">
-      TESTING MOUSE EVENTS 1
-    </button>
-    <br /><br />
-    <button
-      ondblclick="funcOndblclick()"
-      onmouseenter="onMouseEnter()"
-      onmouseleave="onMouseLeave()"
-      onmousemove="onMouseMove()"
-      onmousedown="onMouseDown()"
-      onmouseout="onMouseOut()"
-    >
-      TESTING MOUSE EVENTS 2
-    </button>
-    <br /><br />
+  <body onhashchange="triggerHash(event)" onpageshow="isCached(event)" ontouchstart="countTouches(event)"  ontouchend="countTouches(event)">
+    <div style="display: flex; flex-direction: row; gap: 30px;">
+      <div class="column">
+        <h1 id="hello">hello</h1>
+        <br />
+        <form onsubmit="funcOnsubmit()" onreset="funcOnreset()">
+          <input
+            type="text"
+            onblur="funcBlur()"
+            onchange="funcOnchange()"
+            onfocus="funcOnfocus()"
+            onselect="funcOnselect()"
+            onkeydown="funcOnkeydown()"
+            onkeypress="funcOnkeypress()"
+            onkeyup="funcOnkeyup()"
+          />
+          <button type="submit">submit</button>
+          <input type="reset" value="reset" />
+          <!-- <input type="submit" value="newSubmit"> -->
+        </form>
+        <br />
+        <button onclick="funcOnclick()" oncontextmenu="funcOncontext()">
+          TESTING MOUSE EVENTS 1
+        </button>
+        <br /><br />
+        <button
+          ondblclick="funcOndblclick()"
+          onmouseenter="onMouseEnter()"
+          onmouseleave="onMouseLeave()"
+          onmousemove="onMouseMove()"
+          onmousedown="onMouseDown()"
+          onmouseout="onMouseOut()"
+        >
+          TESTING MOUSE EVENTS 2
+        </button>
+        <br /><br />
+    
+        <input type="text" name="input" id="input" onkeydown="pressAltKey(event)"> <br>
+    
+        <p id="demo"></p> <br><br>
+    
+        <button onclick="changeAnimation()">change animation</button>
+        <br>
+        <div id="animationDiv" onclick="checkBubble(event)"></div> <br>
+        <p>Does the event bubbles? <span id="animationButton"></span></p> <br>
+    
+        <div class="propagation" onclick="func2()"> 
+          div 2
+          <div class="propagation" onclick="func1(event)">
+            div 1
+          </div>
+        </div> <br>
+    
+        <p>stop propagation <input type="checkbox" name="check" id="check"></p> <br>
+    
+        <audio controls abort="funcAbort()" id="buga">
+          <source
+            src="https://netxclusive.com/wp-content/uploads/2022/05/Kizz_Daniel_Ft_Tekno_-_Buga_Netxclusive.com.mp3"
+            type="audio/mp3"
+          />
+          THIS IS THE SIGMA ANTHEM
+        </audio>
 
-    <audio controls autoplay abort="funcAbort()" id="buga">
-      <source
-        src="https://netxclusive.com/wp-content/uploads/2022/05/Kizz_Daniel_Ft_Tekno_-_Buga_Netxclusive.com.mp3"
-        type="audio/mp3"
-      />
-      THIS IS THE SIGMA ANTHEM
-    </audio>
-    <script src="./script/script-3.js"></script>
+      </div>
+      <div class="column">
+        <h1>testing isTrusted</h1>
+        <button onclick="isTrusted(event)" id="scriptBut">Try it</button>
+        <button onclick="triggerClick()">Try it</button> <br><br>
+        <button onclick="changePart()">change part</button>
+        <p id="hashNote"></p> <br>
+        <div class="box" onmousedown="getEvent(event)" onmouseup="getEvent(event)" onmouseover="getEvent(event)" id="eventType"></div> <br>
+        <div class="box" onmousedown="whichEvent(event)" id="whichButton"></div> <br>
+        <p>time since this document was loaded: <span id="timestamp"></span></p>
+        <button onclick="timeStamp(event)">show timestamp</button> <br>
+        <input type="text" onkeypress="didMeta(event)"><br>
+        <button onclick="checkCancel(event)">cancellable</button> <br><br>
+        <form id="testDefaultForm">
+          <input type="text" id="testDefault">
+          <button type="submit">submit</button>
+        </form> <br>
+        <input type="text" onkeypress="checkKey(event)"> <br><br>
+        <div class="box2">
+          testing clientX, clientY, screenX, and screenY
+          <p class="screenLog"></p>
+        </div>
+      </div>
+      <div class="column">
+        <h2>testing dataTransfer event (cut, copy, and paste)</h2>
+        <section class="data-transfer">
+          <h3>for the cut testing</h3>
+          <div class="cut-source" contenteditable="true">
+            cut - Try cutting text from this box...
+          </div>
+          <div class="cut-target" contenteditable="true">
+            cut - Try pasting text to this box...
+          </div>
+        </section>
+        <section class="data-transfer">
+          <h3>for the copy event</h3>
+          <div class="copy-source" contenteditable="true">
+            copy - Try copying text from this box...
+          </div>
+          <div class="copy-target" contenteditable="true">
+            copy - ...and pasting it into this one
+          </div>
+        </section>
+        <section class="data-transfer">
+          <h3>delete from document</h3>
+          <div class="delete-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem possimus maxime accusamus omnis, quo ab sint obcaecati praesentium porro deleniti saepe quis quos nisi rerum provident ea nobis non? Molestias?
+          </div>
+          <button class="delete">delete selected text</button>
+        </section>
+        <section class="data-transfer">
+          <h3>dataTransfer, setData, getData and clearData</h3>
+          <p style="margin-bottom: 15px;" id="transferSource" ondragstart="dragstart_handler(event);" draggable="true">
+            Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+          <div id="transferTarget" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+        </section>
+      </div>
+      <div class="column">
+        <section class="data-transfer">
+          <h3>on paste event</h3>
+          <div class="pasteSource" contenteditable="true">Try copying text from this box...</div>
+          <div class="pasteTarget" contenteditable="true">...and pasting it into this one</div>
+        </section> <br>
+        <input type="text" id="codetest"> <br> <br>
+        <div class="fx">
+          <div>
+            <textarea rows="5" name="test-target" id="test-target"></textarea> <br>
+            <button type="button" name="btn-reset" id="btn-reset">Reset</button>
+          </div>
+          <div class="flex">
+            <pre id="console-log"></pre>
+          </div>
+        </div>  <br>
+        <input type="number" id="count">
+        <button onclick="increaseCount(event)">increase count</button> <br>
+      </div>
+    </div>
+    <script src="./script/script-4.js"></script>
+    <script src="./script/script-5.js"></script>
   </body>
 </html>

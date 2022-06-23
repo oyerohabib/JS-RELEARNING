@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index 2</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="eventPhase">
+    <h4>Event Propagation Chain</h4>
+    <ul>
+      <li>Click 'd1'</li>
+      <li>Analyze event propagation chain</li>
+      <li>Click next div and repeat the experience</li>
+      <li>Change Capturing mode</li>
+      <li>Repeat the experience</li>
+    </ul>
+    <input type="checkbox" id="chCapture" />
+    <label for="chCapture">Use Capturing</label>
+    <div id="d1">d1
+      <div id="d2">d2
+        <div id="d3">d3
+          <div id="d4">d4</div>
+        </div>
+      </div>
+    </div>
+    <div id="divInfo"></div>
+  </section>
+  <script src="./script/script-6.js"></script>
+</body>
+</html>
